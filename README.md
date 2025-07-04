@@ -41,6 +41,7 @@ A minimal yet complete facial recognition system built with **ArcFace**, **FAISS
 
 The **Project Structure** is detailed as follows:
 
+```
 faceid-plus/
 │
 ├── api/                          # FastAPI app
@@ -72,6 +73,7 @@ faceid-plus/
 ├── README.md                     # Project overview and usage
 ├── requirements.txt              # Dependencies
 └── .gitignore
+```
 
 ---
 
