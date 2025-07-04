@@ -23,11 +23,16 @@ To build a simplified version of a production-ready face recognition system inco
 
 ## 🔄 Pipeline Overview
 
-1. **Input Image** → 
-2. **Face Detection & Alignment** →
-3. **Liveness Detection** →
-4. **ArcFace Embedding** →
-5. **FAISS Index Search** →
+1. **Input Image**
+        ↓
+2. **Face Detection & Alignment**
+        ↓
+3. **Liveness Detection**
+        ↓
+4. **ArcFace Embedding**
+        ↓
+5. **FAISS Index Search**
+        ↓
 6. **Identity Match Output**
 
 ---

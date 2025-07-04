@@ -44,11 +44,11 @@ The **Project Structure** is detailed as follows:
 faceid-plus/
 │
 ├── api/                          # FastAPI app
-│   ├── main.py                   # Main API endpoints
-│   ├── endpoints/                # Organized endpoints (recognition, liveness)
-│   │   ├── recognize.py
-│   │   └── liveness.py
-│   └── utils/                    # Helper functions
+│   ├── main.py                   # Main API entrypoint
+│   ├── endpoints/                # Organized endpoints
+│   │   ├── recognize.py          # Face recognition endpoint
+│   │   └── liveness.py           # Liveness detection endpoint
+│   └── utils/                    # Utility modules
 │       ├── preprocessing.py
 │       ├── faiss_index.py
 │       ├── model_loader.py
@@ -58,19 +58,19 @@ faceid-plus/
 │   ├── arcface.onnx
 │   └── liveness_model.pth
 │
-├── data/                         # Sample/test data and FAISS DB
+├── data/                         # Sample data and FAISS index
 │   ├── faiss_index.index
 │   └── sample_faces/
 │       ├── person1.jpg
 │       └── person2.jpg
 │
-├── scripts/                      # Local test scripts and index builder
+├── scripts/                      # Local test scripts
 │   ├── build_index.py
 │   └── test_pipeline.py
 │
-├── project_report.md             # Technical and development documentation
-├── README.md                     # Project overview and usage instructions
-├── requirements.txt              # Project dependencies
+├── project_report.md             # Technical documentation
+├── README.md                     # Project overview and usage
+├── requirements.txt              # Dependencies
 └── .gitignore
 
 ---
