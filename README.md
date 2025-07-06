@@ -60,8 +60,13 @@ faceid-plus/
 │   └── liveness_model.pth
 │
 ├── data/                         # Sample data and FAISS index
+|   ├── employee_faces/           # image database folder
+|   |   ├── 0/                    # containing 10 images of id: 0
+|   |   ├── 1/                    # containing 10 images of id: 1
+|   |   ...
+|   |   └── 157/                  # containing 10 images of id: 157
 │   ├── faiss_index.index
-│   └── sample_faces/
+│   └── sample_faces/             # sample face images for testing
 │       ├── person1.jpg
 │       └── person2.jpg
 │
@@ -69,6 +74,10 @@ faceid-plus/
 │   ├── build_index.py
 │   └── test_pipeline.py
 │
+├── notebooks/                    # Local preparation and test notebooks
+│   ├── face_detection.ipynb      # Notebook showing example face detection
+│   └── image_db_creation.ipynb   # Notebook detailing the steps to create the face image dataset
+|
 ├── project_report.md             # Technical documentation
 ├── README.md                     # Project overview and usage
 ├── requirements.txt              # Dependencies
