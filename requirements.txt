@@ -4,3 +4,5 @@ faiss-cpu
 numpy
 opencv-python
 cryptography
+uvicorn
+python-multipart

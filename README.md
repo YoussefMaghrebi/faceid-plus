@@ -80,7 +80,7 @@ faceid-plus/
 ├── scripts/                      # Local preparation and test scripts
 │   ├── build_index.py            # Script to build the FAISS index 
 │   ├── trace_imports.py          # Script to check the imported libraries by insightface 
-│   └── test_pipeline.py
+│   └── test_api.py               # Script to test the API's functionality
 │
 ├── notebooks/                    # Local preparation and test notebooks
 │   ├── face_detection.ipynb      # Notebook showing example face detection

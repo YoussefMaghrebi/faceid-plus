@@ -83,3 +83,47 @@ def build_faiss_index(
         pickle.dump(labels, f)
 
     return index
+
+def load_index(index_path: str):
+    """
+    Loads a FAISS index from given path.
+
+    Args:
+        index_path (str): Path to load the FAISS index.
+
+    Returns:
+        index (faiss.Index): The loaded FAISS index object.
+    """
+    return faiss.read_index(index_path)
+
+def load_labels(labels_path: str):
+    """
+    Loads the face labels list from given path.
+
+    Args:
+        labels_path (str): Path to load the labels list.
+
+    Returns:
+        list: The loaded face labels list.
+    """
+    with open(labels_path, "rb") as f:
+        return pickle.load(f)
+
+def search_face(index, query_embedding, top_k=5):
+    """
+    Perform a similarity search on a FAISS index using cosine similarity.
+
+    Args:
+        index (faiss.Index): A FAISS index containing normalized vectors.
+        query_embedding (np.ndarray): A 2D numpy array of shape (N, D) representing 
+                                      one or more query vectors to search for.
+        top_k (int, optional): Number of top results to return for each query vector. Defaults to 5.
+
+    Returns:
+        tuple: A tuple (scores, indices) where:
+            - scores (np.ndarray): Array of similarity scores of shape (N, top_k).
+            - indices (np.ndarray): Array of indices of the nearest neighbors in the index, shape (N, top_k).
+    """
+    faiss.normalize_L2(query_embedding)
+    scores, indices = index.search(query_embedding, top_k)
+    return scores, indices
