@@ -127,5 +127,9 @@ This approach ensures that each face is properly localized and standardized befo
 - Deploy via Docker + HTTPS endpoint
 - Train a lightweight custom liveness model from scratch
 - Use secure user registration via face ID and public key encryption
+- Face Enrollment Endpoint: Allow admins to upload new faces to dynamically update the FAISS index and labels.
+- Webcam-based Client: A simple Python or JS interface that captures frames from a webcam and POSTs them to the /recognize_face API.
+- Metrics Dashboard: A GET /metrics endpoint that shows: Number of queries, Recognition success rate, Most recognized users
+- Rebuild Index on Demand: Add a /rebuild_index endpoint or CLI command that reruns build_index.py from inside the app.
 
 ---

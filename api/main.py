@@ -9,7 +9,7 @@ async def lifespan(app: FastAPI):
     # Startup code
     print("Starting up...")
     
-    # Load models & index once on startup
+    # Load models & faiss index once on startup
     embed_model_path = "models/arcface.onnx"
     detect_model_id = 'buffalo_l'
     index_path = "data/face_index.faiss"
@@ -26,7 +26,7 @@ async def lifespan(app: FastAPI):
     app.state.index = index
     app.state.labels = labels
 
-    yield  # this allows requests to be processed
+    yield  # allows requests to be processed
 
     # Shutdown code
     print("Shutting down...")
