@@ -1,3 +1,6 @@
 onnxruntime-gpu
 insightface
-pandas
+faiss-cpu
+numpy
+opencv-python
+cryptography
